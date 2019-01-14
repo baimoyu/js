@@ -1,0 +1,27 @@
+
+.box{
+	background-color: #F4A460;
+	width: 32vw;
+	height: 32vw;
+	margin-bottom: 1.5vw;
+	border-radius: 1.5rem;
+}
+button{
+	width: 100%;
+}
+.start{
+	margin-bottom: 1rem;
+	margin-top: 1rem;
+	height: 2rem;
+	background-color: #F4A460;
+	color: #FFFFFF;
+	border: 1px solid #F4A460;
+	border-radius: 0.2rem;
+}
+.end{
+	height: 2rem;
+	background-color: #FFFFFF;
+	color: sandybrown;
+	border: 1px solid #F4A460;
+	border-radius: 0.2rem;
+}
