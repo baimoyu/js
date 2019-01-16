@@ -18,7 +18,24 @@ function start() {
 			var g = Math.floor(Math.random() * 256);
 			var b = Math.floor(Math.random() * 256);
 			var rgb = 'rgb' + '(' + r + ',' + g + ',' + b + ')';
+		if (rgb!='rgb(4,164,96)'){	
 			return rgb;
+		}
+		else {
+			boxcolor();
+		}
+		}
+		function rEpeat(){
+		var arr3=new Array();
+		for(k=0;k<16581375;k++){
+			arr3.push(rgb);
+		}
+		var arr4=new Array();
+		for(j=0;j<3;j++){
+			var d=Math.floor(Math.random()*arr3.length);
+			arr4.push(arr3[d]);
+			arr3.splice(d,1);
+		}
 		}
 		document.getElementById("box" + arr2[a]).style.backgroundColor = boxcolor();
 	}
