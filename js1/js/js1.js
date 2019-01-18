@@ -18,26 +18,31 @@ function start() {
 			var g = Math.floor(Math.random() * 256);
 			var b = Math.floor(Math.random() * 256);
 			var rgb = 'rgb' + '(' + r + ',' + g + ',' + b + ')';
-		if (rgb!='rgb(4,164,96)'){	
+		if (rgb!='rgb(4,164,96)'){
 			return rgb;
 		}
+
 		else {
 			boxcolor();
 		}
+	}
+				var arr3=[];	
+		while (arr3.length<3){
+			var aa=boxcolor();
+			var Onoff=true;
+			for (var n=0;n<arr3.length;n++){
+				if(arr3[n]==aa){
+					Onoff=false;
+					break;
+				}else{
+					Onoff=true;
+				}
+			}
+			if(Onoff){
+				arr3.push(aa);
+			}
 		}
-		function rEpeat(){
-		var arr3=new Array();
-		for(k=0;k<16581375;k++){
-			arr3.push(rgb);
-		}
-		var arr4=new Array();
-		for(j=0;j<3;j++){
-			var d=Math.floor(Math.random()*arr3.length);
-			arr4.push(arr3[d]);
-			arr3.splice(d,1);
-		}
-		}
-		document.getElementById("box" + arr2[a]).style.backgroundColor = boxcolor();
+		document.getElementById("box" + arr2[a]).style.backgroundColor = arr3[a];
 	}
 }
 
@@ -50,7 +55,7 @@ var t;
 
 function hEad() {
 	clearInterval(t);
-	t = setInterval(start, 500);
+	t = setInterval(start, 1000);
 }
 
 function fInish() {
